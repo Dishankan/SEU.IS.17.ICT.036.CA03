@@ -25,3 +25,8 @@ Route::get('/', function ()
 Route::get('users',[users::class,'add']);
 
 Route::get('detail',[users::class,'detail']);
+
+Route::get('delete/{id}', [UsersController::class, 'delete']);
+
+Route::get('edit/{id}', [UsersController::class, 'edit']);
+

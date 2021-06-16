@@ -33,3 +33,13 @@ public function formview()
     $users = form::all();
     return view('detail',['users'->$users]);
 }
+
+public function delete($id){
+    $data = Admin::find($id);
+    $data->delete();
+    return redirect('user');
+    }
+ public function edit($id){
+        $data = Admin::find($id);
+        return view('edit',['update'=>$data]);
+        }
